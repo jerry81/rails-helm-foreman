@@ -8,6 +8,8 @@ gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 # Use postgresql as the database for Active Record
 gem 'sqlite3-ruby'
 
+gem 'sqlite3'
+
 gem 'redis'
 
 gem 'sidekiq'

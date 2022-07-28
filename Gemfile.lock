@@ -87,6 +87,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -159,6 +161,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux-musl
 
 DEPENDENCIES
   byebug
@@ -169,6 +172,7 @@ DEPENDENCIES
   redis
   sass-rails (>= 6)
   sidekiq
+  sqlite3
   sqlite3-ruby
   tzinfo-data
 
