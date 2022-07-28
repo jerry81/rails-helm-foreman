@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foreman-test
+  labels:
+    app: foreman-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foreman-test
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REDIS_URL
+              value: redis://r-uf67oerhd2z2spq8d1.redis.rds.aliyuncs.com:6379/testforeman
