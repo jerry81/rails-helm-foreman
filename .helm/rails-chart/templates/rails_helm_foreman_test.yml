@@ -10,9 +10,12 @@ spec:
     matchLabels:
       app: foreman-test
   template:
+    metadata:
+      labels:
+        app: foreman-test
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: web
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           ports:
             - containerPort: 3000
@@ -21,7 +24,7 @@ spec:
               value: redis://r-uf67oerhd2z2spq8d1.redis.rds.aliyuncs.com:6379/testforeman
             - name: PROCESS_NAME
               value: web
-        - name: {{ .Chart.Name }}
+        - name: ass
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           ports:
             - containerPort: 3000
