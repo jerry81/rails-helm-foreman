@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# troubleshooting
+
+- [when running multiple pods, and want to see logs, must specify container name](https://stackoverflow.com/questions/66679561/how-to-see-pod-logs-a-container-name-must-be-specified-for-pod-choose-one-of)
