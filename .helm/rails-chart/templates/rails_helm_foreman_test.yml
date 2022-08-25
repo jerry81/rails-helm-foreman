@@ -26,8 +26,6 @@ spec:
               value: web
         - name: ass
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          ports:
-            - containerPort: 3000
           env:
             - name: REDIS_URL
               value: redis://r-uf67oerhd2z2spq8d1.redis.rds.aliyuncs.com:6379/testforeman

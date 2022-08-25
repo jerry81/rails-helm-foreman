@@ -34,5 +34,7 @@ module RailsHelmForeman
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.x.accounting_invoice_omit_orderer_name = ENV['ACCOUNTING_OMIT_ORDERER_NAME']
   end
 end
